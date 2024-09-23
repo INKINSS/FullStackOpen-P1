@@ -1,10 +1,10 @@
-const Part = ({exercisesn, numberExcersisen}) => {
+const Part = ({ name, exercises }) => {
   return (
     <main>
-        <p>excercise: {exercisesn}</p>
-        <p>number of excercises: {numberExcersisen}</p>
+      <p>exercise: {name}</p>
+      <p>number of exercises: {exercises}</p>
     </main>
-  )
-}
+  );
+};
 
-export default Part
+export default Part;

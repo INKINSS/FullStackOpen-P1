@@ -1,11 +1,11 @@
 import Part from "./Part";
 
-const Content = ({part1, part2, part3}) => {
+const Content = ({course}) => {
   return (
     <main>
-      <Part exercisesn={part1.exercises} numberExcersisen={part1.name} />
-      <Part exercisesn={part2.exercises} numberExcersisen={part2.name} />
-      <Part exercisesn={part3.exercises} numberExcersisen={part3.name} />
+      <Part name={course.parts[0].name} exercises={course.parts[0].exercises} />
+      <Part name={course.parts[1].name} exercises={course.parts[1].exercises} />
+      <Part name={course.parts[2].name} exercises={course.parts[2].exercises} />
     </main>
   );
 };
