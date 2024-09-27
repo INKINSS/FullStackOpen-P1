@@ -1,6 +1,9 @@
 import { useState } from "react";
 import Statistics from "./components/Statistics";
 import Title from "./components/Title";
+import AllStatistics from "./components/AllStatistics";
+import Average from "./components/Average";
+import PercentagePositive from "./components/PercentagePositive";
 
 const App = () => {
 
@@ -43,7 +46,9 @@ const App = () => {
       <div>
         <Statistics good={value.good} neutral={value.neutral} bad={value.bad} />
       </div>
-
+      <AllStatistics good={value.good} neutral={value.neutral} bad={value.bad} />
+      <Average good={value.good} neutral={value.neutral} bad={value.bad} />
+      <PercentagePositive good={value.good} neutral={value.neutral} bad={value.neutral} />
     </main>
   );
 };
