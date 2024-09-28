@@ -1,16 +1,17 @@
 import { useState } from "react";
-import Statistics from "./components/Statistics";
 import Title from "./components/Title";
 import AllStatistics from "./components/AllStatistics";
-import Average from "./components/Average";
-import PercentagePositive from "./components/PercentagePositive";
 
 const App = () => {
+
+  
   const [value, setValue] = useState({
     good: 0,
     neutral: 0,
     bad: 0,
   });
+
+  const anyVote = value.good + value.neutral + value.bad
 
   const handleClickGood = () => {
     setValue({ ...value, good: value.good + 1 });
@@ -42,18 +43,7 @@ const App = () => {
         <button onClick={handleReset}>reset</button>
       </div>
       <Title title={"Statistics"} />
-      <Statistics good={value.good} neutral={value.neutral} bad={value.bad} />
-      <AllStatistics
-        good={value.good}
-        neutral={value.neutral}
-        bad={value.bad}
-      />
-      <Average good={value.good} neutral={value.neutral} bad={value.bad} />
-      <PercentagePositive
-        good={value.good}
-        neutral={value.neutral}
-        bad={value.neutral}
-      />
+      { anyVote === 0 ? <span>No Feedback given</span> : <AllStatistics value={value} /> }
     </main>
   );
 };

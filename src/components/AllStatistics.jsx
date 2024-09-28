@@ -1,10 +1,24 @@
+import Average from "./Average"
+import PercentagePositive from "./PercentagePositive"
+import Statistics from "./Statistics"
+import SumStatistics from "./SumStatistics"
 
-const AllStatistics = ({good, neutral, bad}) => {
+const AllStatistics = ({value}) =>{
   return (
-    <div>
-        <p>all Statistics</p>
-        <p>{ good + neutral + bad }</p>
-    </div>
+    <main>
+        <Statistics good={value.good} neutral={value.neutral} bad={value.bad} />
+        <SumStatistics
+            good={value.good}
+            neutral={value.neutral}
+            bad={value.bad}
+        />
+        <Average good={value.good} neutral={value.neutral} bad={value.bad} />
+        <PercentagePositive
+            good={value.good}
+            neutral={value.neutral}
+            bad={value.neutral}
+        />
+    </main>
   )
 }
 
