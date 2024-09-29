@@ -2,6 +2,7 @@ import { useState } from "react";
 import Title from "./components/Title";
 import AllStatistics from "./components/AllStatistics";
 import FeedBackButton from "./components/FeedBackButton";
+import Anecdotes from "./components/Anecdotes";
 
 const App = () => {
 
@@ -45,6 +46,7 @@ const App = () => {
       </div>
       <Title title={"Statistics"} />
       { anyVote === 0 ? <span>No Feedback given</span> : <AllStatistics value={value} /> }
+      <Anecdotes />
     </main>
   );
 };
