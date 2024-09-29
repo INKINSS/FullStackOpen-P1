@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Title from "./components/Title";
 import AllStatistics from "./components/AllStatistics";
+import FeedBackButton from "./components/FeedBackButton";
 
 const App = () => {
 
@@ -37,10 +38,10 @@ const App = () => {
     <main>
       <Title title={"Give Feedback"} />
       <div>
-        <button onClick={handleClickGood}>Good</button>
-        <button onClick={handleClickNeutral}>Neutral</button>
-        <button onClick={handleClickBad}>Bad</button>
-        <button onClick={handleReset}>reset</button>
+        <FeedBackButton title={'Good'} onclick={handleClickGood} />
+        <FeedBackButton title={'Neutral'} onclick={handleClickNeutral} />
+        <FeedBackButton title={'Bad'} onclick={handleClickBad} />
+        <FeedBackButton title={'Reset'} onclick={handleReset} />
       </div>
       <Title title={"Statistics"} />
       { anyVote === 0 ? <span>No Feedback given</span> : <AllStatistics value={value} /> }
