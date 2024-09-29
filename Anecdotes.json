@@ -1,22 +1,27 @@
 [
     {
       "id": 1,
-      "text": "La programación es como la magia, pero real."
+      "text": "La programación es como la magia, pero real.",
+      "votes": 0
     },
     {
       "id": 2,
-      "text": "El software es una herramienta poderosa que puede cambiar el mundo."
+      "text": "El software es una herramienta poderosa que puede cambiar el mundo.",
+      "votes": 0
     },
     {
       "id": 3,
-      "text": "Escribir código es como resolver un rompecabezas gigante."
+      "text": "Escribir código es como resolver un rompecabezas gigante.",
+      "votes": 0
     },
     {
       "id": 4,
-      "text": "La depuración es como ser un detective en un misterio de errores."
+      "text": "La depuración es como ser un detective en un misterio de errores.",
+      "votes": 0
     },
     {
       "id": 5,
-      "text": "El software bien diseñado es como una obra de arte."
+      "text": "El software bien diseñado es como una obra de arte.",
+      "votes": 0
     }
   ]
