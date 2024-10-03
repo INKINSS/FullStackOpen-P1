@@ -14,7 +14,12 @@ const VoteAnecdotes = () => {
   const showNextAnecdote = () => {
     setCurrenAnecdoteIndex((currentAnecdoteIndex + 1) % anecdotes.length);
   };
-  
+
+  const getMostVotedAnecdote = () => {
+    const mostVoted = anecdoteVotes.reduce((max, anecdote) => 
+      anecdote.votes > max.votes ? anecdote : max, anecdoteVotes[0]);
+    return mostVoted.votes === 0 ? "debe de haber al menos un voto" : mostVoted.text;
+  };
 
   return (
     <main>
@@ -27,6 +32,10 @@ const VoteAnecdotes = () => {
         <button type="button" onClick={showNextAnecdote}>
           Next Anecdote
         </button>
+      </div>
+      <div style={{marginTop: '20px'}}>
+        <h3>Anecdota más votada:</h3>
+        <p>{getMostVotedAnecdote()}</p>
       </div>
     </main>
   );
